@@ -178,3 +178,16 @@ button { cursor: pointer; }
   .form button { flex: 1 1 100%; }
   .delete { opacity: 1; }
 }
+
+.clear-completed {
+  margin: 0 0 8px 8px;
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--card);
+  color: var(--muted);
+  font: inherit;
+  cursor: pointer;
+}
+.clear-completed:hover { color: var(--high); border-color: var(--high); background: var(--high-soft); }
+.clear-completed[hidden] { display: none; }
