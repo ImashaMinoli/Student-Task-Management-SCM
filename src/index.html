@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Task Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <h1>Student Task Management</h1>
+      <p id="summary">No tasks yet</p>
+      <div class="progress"><div id="progress-bar"></div></div>
+    </header>
+
+    <form id="task-form" class="form">
+      <input type="text" id="title" placeholder="What do you need to do?" required>
+      <div class="form-row">
+        <input type="date" id="due">
+        <select id="priority">
+          <option value="Low">Low</option>
+          <option value="Medium" selected>Medium</option>
+          <option value="High">High</option>
+        </select>
+        <button type="submit">Add task</button>
+      </div>
+    </form>
+
+    <nav class="filters">
+      <button class="filter active" data-filter="all">All</button>
+      <button class="filter" data-filter="active">Active</button>
+      <button class="filter" data-filter="done">Completed</button>
+    </nav>
+
+    <ul id="task-list" class="list"></ul>
+    <p id="empty" class="empty" hidden>Nothing to show here.</p>
+  </main>
+
+  <script src="../tests/initial-scm-records.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
