@@ -17,3 +17,10 @@
 | CI-07 | Task data (browser localStorage key `student-tasks`) | Data | Developer | v0.1 |
 | CI-08 | Initial SCM records (`docs/initial-scm-records.js`) | Data | SCM Lead | v0.1 |
 
+## Baseline:
+
+Baseline ID: BL-01
+Version: V0.1.0
+Date: 2026-11-02
+Include Changes: CR-01
+Staus: Approved
