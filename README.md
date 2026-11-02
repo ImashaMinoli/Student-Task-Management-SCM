@@ -36,3 +36,6 @@ StudentTaskManagement/
 ├── .gitignore
 └── README.md
 ```
+## Current Development Status
+Initial version completed.
+Version : 0.1.0 
