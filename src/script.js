@@ -9,6 +9,7 @@ const empty = document.getElementById("empty");
 const summary = document.getElementById("summary");
 const progressBar = document.getElementById("progress-bar");
 const filterButtons = document.querySelectorAll(".filter");
+const clearButton = document.getElementById("clear-completed");
 
 function loadTasks() {
   const stored = localStorage.getItem(STORAGE_KEY);
@@ -39,6 +40,13 @@ function toggleTask(id) {
 
 function deleteTask(id) {
   tasks = tasks.filter((t) => t.id !== id);
+  save();
+  render();
+}
+
+// CR-01: remove all completed tasks at once
+function clearCompleted() {
+  tasks = tasks.filter((t) => !t.done);
   save();
   render();
 }
@@ -92,6 +100,7 @@ function render() {
   visible.forEach((task) => list.appendChild(createTaskElement(task)));
 
   empty.hidden = visible.length > 0;
+  clearButton.hidden = !tasks.some((t) => t.done);
 
   const remaining = tasks.filter((t) => !t.done).length;
   summary.textContent = tasks.length
@@ -110,6 +119,8 @@ form.addEventListener("submit", (event) => {
   form.reset();
   priorityInput.value = "Medium";
 });
+
+clearButton.addEventListener("click", clearCompleted);
 
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
