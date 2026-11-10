@@ -6,7 +6,7 @@
 | Field | Details |
 |-------|---------|
 | **Change ID** | CR-01 |
-| **Requested by** | <Your name> (Member 2 – SCM Lead) |
+| **Requested by** | R S I M A Sewwandi |
 | **Date** | 2026-11-02 |
 | **Description** | Add a "Clear completed" button that removes all completed tasks in one click. The button is hidden when there are no completed tasks. |
 | **Reason** | Users had to delete finished tasks one by one, which is slow as the list grows. |
